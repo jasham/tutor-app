@@ -6,11 +6,13 @@ import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux'
 import { BrowserRouter, Route } from 'react-router-dom'
 import { store } from './redux/store'
+import Kitchensink from './screens/kitchensink'
 
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <Route component={App} path="/" />
+      <Route component={Kitchensink} path="/kitchensink" />
     </BrowserRouter>
   </Provider>,
   document.getElementById('root')

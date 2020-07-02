@@ -10,9 +10,9 @@ function App(props) {
   }
   return (
     <div className="App">
-      <button onClick={getData}>
+      {/* <button onClick={getData}>
         Click Me
-      </button>
+      </button> */}
 
     </div>
   );
