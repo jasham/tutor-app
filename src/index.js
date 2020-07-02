@@ -1,19 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-import { Provider } from 'react-redux'
-import { BrowserRouter, Route } from 'react-router-dom'
-import { store } from './redux/store'
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+import { Provider } from "react-redux";
+import { BrowserRouter, Route } from "react-router-dom";
+import { store } from "./redux/store";
+import DaropDwonMenu from "./Componants/Commen/DaropDwonMenu";
 
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <Route component={App} path="/" />
+      <Route component={DaropDwonMenu} path="/DaropDwonMenu" />
     </BrowserRouter>
   </Provider>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
