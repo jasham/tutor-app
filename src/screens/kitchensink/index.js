@@ -12,13 +12,13 @@ export const MainWrapper = styled.div`
 `
 class Kitchensink extends Component {
     state = {
-        inputValue : "",
-        country : ""
+        inputValue: "",
+        country: ""
     }
 
-    handleClick = (country) => {
-        this.setState({country:country});
-    };
+    // handleClick = (country) => {
+    //     this.setState({ country: country });
+    // };
 
     handleClick = (event) => {
         event.preventDefault();
@@ -28,69 +28,71 @@ class Kitchensink extends Component {
         return (
             <MainWrapper>
                 <Button
-                    styleClass = 'btn-success'
-                    value = 'Click me!'
-                    onClick = {this.handleClick}
+                    styleClass='primary'
+                    value='Click me!'
+                    onClick={this.handleClick}
                 />
                 <div
-                        style = {{
-                        margin : 20
+                    style={{
+                        margin: 20
                     }}
                 >
                     <Button
-                        styleClass = 'btn-outline-primary'
-                        value = 'Click me!'
-                        onClick = {this.handleClick} 
+                        styleClass='outline-primary'
+                        value='Click me!'
+                        onClick={this.handleClick}
                     />
                 </div>
                 <div
-                    style = {{
-                        margin : 20
+                    style={{
+                        margin: 20
                     }}
                 >
                     <Button
-                        styleClass = 'btn-link'
-                        value = 'Click me!'
-                        onClick = {this.handleClick} 
+                        styleClass='link'
+                        value='Click me!'
+                        onClick={this.handleClick}
                     />
                 </div>
                 <div
-                    style = {{
-                        margin : 20
+                    style={{
+                        margin: 20
                     }}
                 >
                     <Button
-                        styleClass = 'btn-success btn-lg'
-                        value = 'Click me!'
-                        onClick = {this.handleClick} 
+                        styleClass='success'
+                        value='Click me!'
+                        onClick={this.handleClick}
+                        size={"lg"}
                     />
                 </div>
                 <div
-                    style = {{
-                        margin : 20
+                    style={{
+                        margin: 20
                     }}
                 >
                     <Button
-                        styleClass = 'btn-success btn-sm'
-                        value = 'Click me!'
-                        onClick = {this.handleClick} 
+                        styleClass='success'
+                        value='Click me!'
+                        onClick={this.handleClick}
+                        size={"sm"}
                     />
                 </div>
 
                 <div
                     style={{
-                        margin : 20
+                        margin: 20
                     }}
                 >
                     <Dropdown data={[
-                            {value:1, label:'India'},
-                            {value:2, label:'USA'},
-                            {value:3, label:'UK'},
-                            {value:4, label:'Russia'},
-                            {value:5, label:'China'},
-                            {value:6, label:'Italy'},
-                            {value:7, label:'Germany'},
-                        ]}
+                        { value: 1, label: 'India' },
+                        { value: 2, label: 'USA' },
+                        { value: 3, label: 'UK' },
+                        { value: 4, label: 'Russia' },
+                        { value: 5, label: 'China' },
+                        { value: 6, label: 'Italy' },
+                        { value: 7, label: 'Germany' },
+                    ]}
                         value={this.state.country}
                         placeholder='Select Country'
                         onChange={this.handleDropdown}
@@ -101,4 +103,4 @@ class Kitchensink extends Component {
     }
 }
 
-export default Kitchensink;
+export default Kitchensink

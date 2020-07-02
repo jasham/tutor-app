@@ -1,16 +1,16 @@
 import React from 'react'
-import propTypes from 'prop-types'
+import Button from 'react-bootstrap/Button'
 
-const Button = ({styleClass, value, onClick}) => {
-    return(
+const CustomButton = (props) => {
+    return (
         <Button
-        className = {`btn ${styleClass}`}
-        onClick = {(event) => onClick(event)}
-    >
-        {value}
-    </Button>
+            variant={props.styleClass}
+            onClick={(event) => props.onClick(event)}
+            size={props.size}
+        >
+            {props.value}
+        </Button>
     )
-    
 };
 
 // Button.propTypes = {
@@ -23,4 +23,4 @@ const Button = ({styleClass, value, onClick}) => {
 //     styleClass : 'btn-primary'
 // };
 
-export default Button;
+export default CustomButton;
