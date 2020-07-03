@@ -8,13 +8,14 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import { store } from './redux/store'
 import Kitchensink from './screens/kitchensink'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Main from './screens/main';
 
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <Route component={Kitchensink} exact path="/sink" />
 
-      <Route component={App} exact path="/" />
+      <Route component={Main} exact path="/" />
     </BrowserRouter>
   </Provider>,
   document.getElementById('root')

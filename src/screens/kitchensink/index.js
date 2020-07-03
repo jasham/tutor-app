@@ -16,9 +16,10 @@ class Kitchensink extends Component {
         country: ""
     }
 
-    // handleClick = (country) => {
-    //     this.setState({ country: country });
-    // };
+    handleDropdown = (country) => {
+        console.log("here is dropdown", country.target.value)
+        this.setState({ country: country.target.value });
+    };
 
     handleClick = (event) => {
         event.preventDefault();
