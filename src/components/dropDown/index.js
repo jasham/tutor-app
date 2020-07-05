@@ -11,6 +11,11 @@ const Select = styled.select`
                 padding : 2px 10px 2px 10px;
             `
             :
+            props.dropDownSize === "normal" ?
+            `
+                padding : 6px;
+            `
+            :
             props.dropDownSize === "big" ?
             `
                 padding : 10px;
@@ -31,7 +36,7 @@ const Select = styled.select`
     outline : 0px;
     ${props => props.width ? `width : ${props.width}` : ""};
     color : ${props => props.color};
-    font-family : ${props => props.ffamily};
+    font-family : ${props => props.ffamily} !important;
     font-size : ${props => props.fsize} !important;
 `
 

@@ -9,16 +9,16 @@ import { store } from './redux/store'
 import Kitchensink from './screens/kitchensink'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Main from './screens/main';
-import DaropDwonMenu from "./Componants/Commen/DaropDwonMenu";
+import AskQuestion from './screens/askQuestion'
+
 
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <Route component={Kitchensink} exact path="/sink" />
-
+      <Route component={AskQuestion} exact path="/question" />
       <Route component={Main} exact path="/" />
       {/* <Route component={App} path="/" /> */}
-      <Route component={DaropDwonMenu} path="/DaropDwonMenu" />
     </BrowserRouter>
   </Provider>,
   document.getElementById("root")

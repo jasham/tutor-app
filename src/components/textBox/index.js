@@ -15,11 +15,13 @@ const StyledTextWrapper = styled.div`
     }
     ${props => props.overflow ? `text-overflow : ellipse;
                                 overflow : hidden;` : ""};
+    ${props => props.style}
 `
 
 const TextBox = (props) => {
     return(
         <StyledTextWrapper
+            style={{...props.style}}
             ffamily = {fontFamilySelector(props.ffamily)}
             fsize = {fontSizeSelector(props.fsize)}
             color = {props.color}

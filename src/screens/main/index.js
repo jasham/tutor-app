@@ -6,6 +6,11 @@ import TextBox from '../../components/textBox'
 import Dropdown from '../../components/dropDown'
 import Header from '../../components/header'
 import school from '../../assets/images/school.png'
+import Form from 'react-bootstrap/Form'
+import FormControl from 'react-bootstrap/FormControl'
+import { fontFamilySelector, fontSizeSelector } from '../../contants/reusableStyles'
+import InputGroup from 'react-bootstrap/InputGroup';
+import InputBox from '../../components/inputField'
 
 const MainWrapper = styled.div`
     position : absolute;
@@ -49,7 +54,7 @@ const RightSubWrapper = styled.div`
     width : 445px;
 `
 const Context = styled.div`
-    margin-bottom : 13px;
+    margin-bottom : 0px;
 `
 
 class Main extends Component {
@@ -89,7 +94,136 @@ class Main extends Component {
                                     direction={"row"}
                                 >
                                     <RightSubWrapper>
-                                               
+                                        <TextBox
+                                            innerText={"Create an account"}
+                                            fsize={"larger"}
+                                            ffamily={"bold"}
+                                            color={"rgba(255, 255, 255, 0.7)"}
+                                            style={{
+                                                height : 43
+                                            }}
+                                        />
+                                        <Context
+                                            style={{
+                                                paddingBottom : 35
+                                            }}
+                                        >
+                                                <TextBox
+                                                    innerText={"It's quick and easy"}
+                                                    fsize={"big"}
+                                                    ffamily={"bold"}
+                                                    color={"rgba(65,105,225,0.8)"}
+
+                                                />
+                                        </Context>
+                                        <Context>
+                                            <Flex
+                                                jcontent={"space-between"}
+                                                direction={"row"} 
+                                            >
+                                                <InputBox
+                                                    styleClass={"mb-3"}
+                                                    width={"48%"}
+                                                    placeholder={"Firstname"}
+                                                    size={"lg"}
+                                                    style={{
+                                                        marginBottom : "10px !important"
+                                                    }}
+                                                />
+                                                <InputBox
+                                                    styleClass={"mb-3"}
+                                                    width={"48%"}
+                                                    placeholder={"Lastname"}
+                                                    size={"lg"}
+                                                    style={{
+                                                        marginBottom : "10px !important"
+                                                    }}
+                                                />
+                                            </Flex>
+                                            </Context>
+                                            <Flex
+                                                width={"100%"}
+                                            >
+                                            <Context
+                                                style={{
+                                                    width : "100%",
+                                                    paddingBottom : "10px"
+                                                }}
+                                            >
+                                                <Dropdown data={[
+                                                        {value:1, label:'India'},
+                                                        {value:2, label:'USA'},
+                                                        {value:3, label:'UK'},
+                                                        {value:4, label:'Russia'},
+                                                        {value:5, label:'China'},
+                                                        {value:6, label:'Italy'},
+                                                        {value:7, label:'Germany'},
+                                                    ]}
+                                                        value={this.state.country}
+                                                        placeholder='Select Country'
+                                                        onChange={this.handleDropdown}
+                                                        dropDownSize={"big"}
+                                                        width={"100%"}
+                                                        fsize={"normal"}
+                                                        // ffamily={"semi-bold"}
+                                                        // color={"rgba(65,105,225,0.8)"}
+                                                />
+                                            </Context>
+                                            </Flex>
+                                                
+                                                <Flex
+                                                    direction={"column"}
+                                                    width={"100%"}
+                                                > 
+                                                    <Context
+                                                        style={{
+                                                            width : "100%"
+
+                                                        }}
+                                                    >  
+                                                        <InputBox
+                                                            styleClass={"mb-3"}
+                                                            width={"100%"}
+                                                            placeholder={"Mobile Number"}
+                                                            size={"lg"}
+                                                            style={{
+                                                                marginBottom : "10px !important"
+                                                            }}
+                                                        />
+                                                    </Context>
+                                                    <Context
+                                                        style={{
+                                                            width : "100%"
+                                                        }}
+                                                    >
+                                                        <InputBox
+                                                            styleClass={"mb-3"}
+                                                            width={"100%"}
+                                                            placeholder={"New Password"}
+                                                            type={"password"}
+                                                            size={"lg"}
+                                                            style={{
+                                                                marginBottom : "10px !important"
+                                                            }}
+                                                        />
+                                                    </Context>
+                                                    <Context
+                                                        style={{
+                                                            width : "100%"
+                                                        }}
+                                                    >
+                                                        <Button
+                                                            styleClass={"success"}
+                                                            // backgroundColor={"#228B22"}
+                                                            fsize={"big"}
+                                                            // color={"#FFFFFF"}
+                                                            value={"Sign Up"}
+                                                            width={"100%"}
+                                                            ffamily={"bold"} 
+                                                            size={"lg"}
+                                                        />
+                                                    </Context> 
+                                                </Flex>
                                     </RightSubWrapper>
                                 </Flex>
                             </RightWrapper>

@@ -1,15 +1,25 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button'
+import styled from 'styled-components'
+import { fontFamilySelector, fontSizeSelector } from '../../contants/reusableStyles'
 
+const CButton = styled(Button)`
+    width:${props => props.width };
+    font-family:${props => props.ffamily};
+    font-size : ${props => props.fsize};
+`
 const CustomButton = (props) => {
     return (
-        <Button
+        <CButton
             variant={props.styleClass}
             onClick={(event) => props.onClick(event)}
             size={props.size}
+            width={props.width}
+            ffamily = {fontFamilySelector(props.ffamily)}
+            fsize = {fontSizeSelector(props.fsize)}
         >
             {props.value}
-        </Button>
+        </CButton>
     )
 };
 
